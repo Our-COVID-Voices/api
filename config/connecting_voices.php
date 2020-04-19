@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 return [
 
-    'repo_url' => 'https://github.com/hearing-voices-network/api',
+    'repo_url' => 'https://github.com/Our-COVID-Voices/api',
 
     'frontend_url' => env('FRONTEND_URL'),
 
@@ -25,7 +25,7 @@ return [
         'expiry_time' => 60 * 5,
     ],
 
-    'admin_email' => 'info+connecting-voices@ayup.agency', // TODO: Change this once confirmed by client.
+    'admin_email' => 'info+our-covid-voices@ayup.agency', // TODO: Change this once confirmed by client.
 
     'date_format' => 'd/m/Y',
 
