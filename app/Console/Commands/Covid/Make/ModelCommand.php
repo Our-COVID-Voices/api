@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Console\Commands\Cv\Make;
+namespace App\Console\Commands\Covid\Make;
 
 use Illuminate\Console\Command;
 

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Console\Commands\Cv\Schedule;
+namespace App\Console\Commands\Covid\Schedule;
 
 use Illuminate\Console\Command;
 
