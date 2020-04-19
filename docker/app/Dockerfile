@@ -2,11 +2,12 @@
 FROM ubuntu:18.04
 
 # Set maintainer to Ayup Digital.
-LABEL maintainer="Ayup Digital"
+LABEL maintainer="Ayup Digital <info@ayup.agency>"
 
 # Install generic software.
 RUN apt-get update \
-    && apt-get install -y locales nginx curl zip unzip git software-properties-common supervisor \
+    && apt-get install -y locales nginx curl zip unzip git \
+    software-properties-common supervisor \
     && locale-gen en_GB.UTF-8
 
 # Set needed environment variables before installing PHP.
@@ -44,12 +45,10 @@ COPY etc/php/7.3/cli/php.ini /etc/php/7.3/cli/php.ini
 COPY etc/supervisor/conf.d/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
 # Copy the bootstrap script over and make executable.
-COPY /usr/local/bin/start-container /usr/local/bin/start-container
-RUN chmod +x /usr/local/bin/start-container
+COPY /usr/local/bin/start-container.sh /usr/local/bin/start-container.sh
 
 # Copy the packaged app (only used when deploying).
-COPY packaged /var/www/html
-RUN chown -R www-data: /var/www/html
+COPY --chown=www-data:www-data packaged /var/www/html
 
 # Expose port 80 for HTTP access.
 EXPOSE 80
@@ -58,4 +57,4 @@ EXPOSE 80
 WORKDIR /var/www/html
 
 # Set default command to the bootstrap script.
-CMD ["start-container"]
+CMD ["start-container.sh"]
