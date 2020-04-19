@@ -52,7 +52,7 @@ class EndUserResource extends JsonResource
             'contributions',
             count($this->resource->contributions),
             $this->resource->contributions()->count()
-            );
+        );
     }
 
     /**
@@ -68,7 +68,7 @@ class EndUserResource extends JsonResource
             'publicContributions',
             count($this->resource->publicContributions),
             $this->resource->publicContributions()->count()
-            );
+        );
     }
 
     /**
@@ -84,7 +84,7 @@ class EndUserResource extends JsonResource
             'privateContributions',
             count($this->resource->privateContributions),
             $this->resource->privateContributions()->count()
-            );
+        );
     }
 
     /**
@@ -100,7 +100,7 @@ class EndUserResource extends JsonResource
             'inReviewContributions',
             count($this->resource->inReviewContributions),
             $this->resource->inReviewContributions()->count()
-            );
+        );
     }
 
     /**
@@ -116,6 +116,6 @@ class EndUserResource extends JsonResource
             'changesRequestedContributions',
             count($this->resource->changesRequestedContributions),
             $this->resource->changesRequestedContributions()->count()
-            );
+        );
     }
 }
