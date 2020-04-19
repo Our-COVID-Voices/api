@@ -158,7 +158,7 @@ class DownloadControllerTest extends TestCase
 
         Date::setTestNow(
             Date::now()->addSeconds(
-                (int)config('connecting_voices.file_tokens.expiry_time') + 1
+                (int)config('our_covid_voices.file_tokens.expiry_time') + 1
             )
         );
 

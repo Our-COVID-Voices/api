@@ -24,8 +24,8 @@ class PerPageParameter extends Parameter
             ->schema(
                 Schema::integer()
                     ->minimum(1)
-                    ->maximum(Config::get('connecting_voices.pagination.max'))
-                    ->default(Config::get('connecting_voices.pagination.default'))
+                    ->maximum(Config::get('our_covid_voices.pagination.max'))
+                    ->default(Config::get('our_covid_voices.pagination.default'))
             );
     }
 }

@@ -68,7 +68,7 @@ class LoginController extends WebController
     protected function authenticated(Request $request, User $user): ?RedirectResponse
     {
         // If OTP is disabled then skip this method.
-        if (!Config::get('connecting_voices.otp_enabled')) {
+        if (!Config::get('our_covid_voices.otp_enabled')) {
             return null;
         }
 

@@ -47,7 +47,7 @@
         </div>
 
         <button class="govuk-button" type="submit">
-          @if (config('connecting_voices.otp_enabled'))
+          @if (config('our_covid_voices.otp_enabled'))
             Send code
           @else
             Confirm

@@ -36,7 +36,7 @@ class EndUserEventSubscriber extends EventSubscriber
         $emailContent = Setting::findOrFail('email_content')->value;
 
         $this->dispatch(new TemplateMail(
-            Config::get('connecting_voices.admin_email'),
+            Config::get('our_covid_voices.admin_email'),
             Arr::get($emailContent, 'admin.new_end_user.subject'),
             Arr::get($emailContent, 'admin.new_end_user.body'),
             new NewEndUserSubstituter($event->getEndUser())

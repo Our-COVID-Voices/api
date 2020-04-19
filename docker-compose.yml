@@ -30,7 +30,7 @@ services:
       - .:/var/www/html
     networks:
       - app-net
-    command: php artisan cv:schedule:loop
+    command: php artisan covid:schedule:loop
     restart: on-failure
 
   node:

@@ -15,7 +15,7 @@ class AdminCommand extends Command
      *
      * @var string
      */
-    protected $signature = "cv:make:admin
+    protected $signature = "covid:make:admin
                             {name : The admin's name}
                             {email : The admin's email}
                             {phone : The admin's phone number}

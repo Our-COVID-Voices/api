@@ -41,7 +41,7 @@ class ContributionEventSubscriber extends EventSubscriber
         $emailContent = Setting::findOrFail('email_content')->value;
 
         $this->dispatch(new TemplateMail(
-            Config::get('connecting_voices.admin_email'),
+            Config::get('our_covid_voices.admin_email'),
             Arr::get($emailContent, 'admin.new_contribution.subject'),
             Arr::get($emailContent, 'admin.new_contribution.body'),
             new NewContributionSubstituter($event->getContribution())
@@ -57,7 +57,7 @@ class ContributionEventSubscriber extends EventSubscriber
         $emailContent = Setting::findOrFail('email_content')->value;
 
         $this->dispatch(new TemplateMail(
-            Config::get('connecting_voices.admin_email'),
+            Config::get('our_covid_voices.admin_email'),
             Arr::get($emailContent, 'admin.updated_contribution.subject'),
             Arr::get($emailContent, 'admin.updated_contribution.body'),
             new UpdatedContributionSubstituter($event->getContribution())

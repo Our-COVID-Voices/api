@@ -18,7 +18,7 @@ import uuid
 # ==================================================
 # Template details.
 # ==================================================
-template = Template('Create the infrastructure needed to run the Connecting Voices API')
+template = Template('Create the infrastructure needed to run the Our COVID Voices API')
 template.set_version('2010-09-09')
 
 # ==================================================
@@ -216,8 +216,8 @@ queue_worker_task_definition_family_variable = Join('-', ['queue-worker', Ref(en
 scheduler_task_definition_family_variable = Join('-', ['scheduler', Ref(environment_parameter)])
 api_user_name_variable = Join('-', ['api', Ref(environment_parameter)])
 ci_user_name_variable = Join('-', ['ci', Ref(environment_parameter)])
-database_name_variable = 'connecting_voices'
-database_username_variable = 'connecting_voices'
+database_name_variable = 'our_covid_voices'
+database_username_variable = 'our_covid_voices'
 
 # ==================================================
 # Resources.
@@ -566,7 +566,7 @@ scheduler_task_definition_resource = template.add_resource(
       Command=[
         'php',
         'artisan',
-        'cv:schedule:loop'
+        'covid:schedule:loop'
       ],
       WorkingDirectory='/var/www/html',
       HealthCheck=ecs.HealthCheck(

@@ -18,6 +18,6 @@ class ExternalDocs extends BaseExternalDocs
     {
         return parent::create($objectId)
             ->description('The GitHub repo')
-            ->url(Config::get('connecting_voices.repo_url'));
+            ->url(Config::get('our_covid_voices.repo_url'));
     }
 }

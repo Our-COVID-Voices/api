@@ -33,7 +33,7 @@ class NewEndUserSubstituter extends BaseVariableSubstituter
         return [
             'END_USER_EMAIL' => $this->endUser->user->email,
             'END_USER_CREATED_AT' => $this->endUser->user->created_at
-                ->format(Config::get('connecting_voices.datetime_format')),
+                ->format(Config::get('our_covid_voices.datetime_format')),
         ];
     }
 }

@@ -16,7 +16,7 @@ class ClientCommand extends Command
      *
      * @var string
      */
-    protected $signature = "cv:make:client
+    protected $signature = "covid:make:client
                             {name : The OAuth client's name}
                             {redirect-uri : The OAuth client's redirect URI}
                             {--first-party : Specify a first party client}";

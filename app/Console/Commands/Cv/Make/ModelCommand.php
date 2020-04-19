@@ -13,7 +13,7 @@ class ModelCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'cv:make:model 
+    protected $signature = 'covid:make:model 
                             {name : The name of the class}';
 
     /**

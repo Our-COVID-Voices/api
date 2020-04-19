@@ -35,7 +35,7 @@ class RequestFileOperation extends Operation
                         This returns a download URL which will expire within %d seconds, and can 
                         only be accessed once.
                         EOT,
-                        Config::get('connecting_voices.file_tokens.expiry_time')
+                        Config::get('our_covid_voices.file_tokens.expiry_time')
                     )
                 )
             )

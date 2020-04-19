@@ -25,8 +25,8 @@ class StoreEndUserRequest extends FormRequest
             'birth_year' => [
                 'bail',
                 'integer',
-                Rule::min(Date::today()->year - Config::get('connecting_voices.age_requirement.max')),
-                Rule::max(Date::today()->year - Config::get('connecting_voices.age_requirement.min')),
+                Rule::min(Date::today()->year - Config::get('our_covid_voices.age_requirement.max')),
+                Rule::max(Date::today()->year - Config::get('our_covid_voices.age_requirement.min')),
             ],
             'gender' => ['bail', 'string', 'max:255'],
             'ethnicity' => ['bail', 'string', 'max:255'],
@@ -43,7 +43,7 @@ class StoreEndUserRequest extends FormRequest
         return [
             'email.unique' => sprintf(
                 'The account has been withdrawn. Please contact the admin team via %s for more info.',
-                config('connecting_voices.admin_email')
+                config('our_covid_voices.admin_email')
             ),
         ];
     }

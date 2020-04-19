@@ -37,8 +37,8 @@ class PaginationTest extends TestCase
         $pagination = new Pagination();
 
         $this->assertEquals(
-            (int)config('connecting_voices.pagination.max'),
-            $pagination->perPage((int)config('connecting_voices.pagination.max'))
+            (int)config('our_covid_voices.pagination.max'),
+            $pagination->perPage((int)config('our_covid_voices.pagination.max'))
         );
     }
 
@@ -59,8 +59,8 @@ class PaginationTest extends TestCase
         $pagination = new Pagination();
 
         $this->assertEquals(
-            (int)config('connecting_voices.pagination.max'),
-            $pagination->perPage((int)config('connecting_voices.pagination.max') + 1)
+            (int)config('our_covid_voices.pagination.max'),
+            $pagination->perPage((int)config('our_covid_voices.pagination.max') + 1)
         );
     }
 }
