@@ -26,8 +26,7 @@
         "laravel/tinker": "^1.0",
         "league/flysystem-aws-s3-v3": "~1.0",
         "predis/predis": "^1.1",
-        "spatie/laravel-query-builder": "^1.17",
-        "twilio/sdk": "^6.3"
+        "spatie/laravel-query-builder": "^1.17"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",
