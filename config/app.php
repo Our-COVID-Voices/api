@@ -163,6 +163,7 @@ return [
         Illuminate\View\ViewServiceProvider::class,
 
         // Package Service Providers...
+        Bugsnag\BugsnagLaravel\BugsnagServiceProvider::class,
 
         // Application Service Providers...
         App\Providers\AppServiceProvider::class,
