@@ -215,7 +215,7 @@ api_task_definition_family_variable = Join('-', ['api', Ref(environment_paramete
 queue_worker_task_definition_family_variable = Join('-', ['queue-worker', Ref(environment_parameter)])
 scheduler_task_definition_family_variable = Join('-', ['scheduler', Ref(environment_parameter)])
 api_user_name_variable = Join('-', ['api', Ref(environment_parameter)])
-ci_user_name_variable = Join('-', ['ci', Ref(environment_parameter)])
+ci_user_name_variable = Join('-', ['ci-api', Ref(environment_parameter)])
 database_name_variable = 'our_covid_voices'
 database_username_variable = 'our_covid_voices'
 
