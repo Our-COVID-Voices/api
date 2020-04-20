@@ -35,7 +35,7 @@ class NewContributionSubstituter extends BaseVariableSubstituter
             'CONTRIBUTION_CONTENT' => $this->contribution->content,
             'CONTRIBUTION_STATUS' => $this->contribution->status,
             'CONTRIBUTION_CREATED_AT' => $this->contribution->created_at
-                ->format(Config::get('connecting_voices.datetime_format')),
+                ->format(Config::get('our_covid_voices.datetime_format')),
             'TAGS' => $this->contribution
                 ->tags()
                 ->pluck('name')

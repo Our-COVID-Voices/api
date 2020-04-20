@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Console\Commands\Cv\Make;
+namespace App\Console\Commands\Covid\Make;
 
 use Illuminate\Console\Command;
 
@@ -13,7 +13,7 @@ class ModelCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'cv:make:model 
+    protected $signature = 'covid:make:model 
                             {name : The name of the class}';
 
     /**

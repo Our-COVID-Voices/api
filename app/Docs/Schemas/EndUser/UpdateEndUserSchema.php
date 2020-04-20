@@ -27,8 +27,8 @@ class UpdateEndUserSchema extends Schema
                 Schema::string('country')
                     ->nullable(),
                 Schema::integer('birth_year')
-                    ->minimum(Date::today()->year - Config::get('connecting_voices.age_requirement.max'))
-                    ->maximum(Date::today()->year - Config::get('connecting_voices.age_requirement.min'))
+                    ->minimum(Date::today()->year - Config::get('our_covid_voices.age_requirement.max'))
+                    ->maximum(Date::today()->year - Config::get('our_covid_voices.age_requirement.min'))
                     ->nullable(),
                 Schema::string('gender')
                     ->nullable(),

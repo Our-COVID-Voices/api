@@ -14,9 +14,9 @@ class Pagination
      */
     public function perPage(int $perPage = null): int
     {
-        $perPage = $perPage ?? Config::get('connecting_voices.pagination.default');
+        $perPage = $perPage ?? Config::get('our_covid_voices.pagination.default');
         $perPage = max($perPage, 1);
-        $perPage = min($perPage, Config::get('connecting_voices.pagination.max'));
+        $perPage = min($perPage, Config::get('our_covid_voices.pagination.max'));
 
         return $perPage;
     }

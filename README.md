@@ -1,6 +1,6 @@
-# Connecting Voices - API
+# Our COVID Voices - API
 
-The main API component for the Connecting Voices platform.
+The main API component for the Our COVID Voices platform.
 
 ## Getting started
 
@@ -75,7 +75,7 @@ Create a user for yourself to login with:
 
 ```bash
 # If you don't specify a password, one will be generated and outputted for you.
-./develop art cv:make:admin <name> <email> <phone> [--password=secret] 
+./develop art covid:make:admin <name> <email> <phone> [--password=secret] 
 ```
 
 And finally create OAuth clients for trusted apps:
@@ -85,7 +85,7 @@ And finally create OAuth clients for trusted apps:
 ./develop art passport:client --password
 
 # Authorization grant clients (admin webapp):
-./develop art cv:make:client "Connecting Voices Admin" "http://localhost:3000/auth/callback"
+./develop art covid:make:client "Admin" "http://localhost:3000/auth/callback"
 ```
 
 You should now be able to login to the API, and the admin web app once you've 
@@ -133,13 +133,13 @@ conduct, and the process for submitting pull requests to us.
 ## Versioning
 
 We use [SemVer](http://semver.org/) for versioning. For the versions available, 
-see the [tags on this repository](https://github.com/hearing-voices-network/api/tags). 
+see the [tags on this repository](https://github.com/Our-COVID-Voices/api/tags). 
 
 ## Authors
 
 * [Ayup Digital](https://ayup.agency)
 
-See also the list of [contributors](https://github.com/hearing-voices-network/api/contributors) 
+See also the list of [contributors](https://github.com/Our-COVID-Voices/api/contributors) 
 who participated in this project.
 
 ## License

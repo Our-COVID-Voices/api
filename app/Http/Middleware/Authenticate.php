@@ -37,7 +37,7 @@ class Authenticate extends Middleware
         // Check if the request contains an OAuth redirect URI for the admin web app.
         return Str::contains(
             $request->input('redirect_uri', ''),
-            Config::get('connecting_voices.admin_url')
+            Config::get('our_covid_voices.admin_url')
         );
     }
 
@@ -50,7 +50,7 @@ class Authenticate extends Middleware
         // Check if the request contains an OAuth redirect URI for the frontend web app.
         return Str::contains(
             $request->input('redirect_uri', ''),
-            Config::get('connecting_voices.frontend_url')
+            Config::get('our_covid_voices.frontend_url')
         );
     }
 }

@@ -557,7 +557,7 @@ class ContributionControllerTest extends TestCase
                 /** @var array $emailContent */
                 $emailContent = Setting::findOrFail('email_content')->value;
 
-                return $mail->getTo() === config('connecting_voices.admin_email')
+                return $mail->getTo() === config('our_covid_voices.admin_email')
                     && $mail->getSubject() === Arr::get($emailContent, 'admin.new_contribution.subject')
                     && $mail->getBody() === Arr::get($emailContent, 'admin.new_contribution.body')
                     && $mail->getSubstituter() instanceof NewContributionSubstituter;
@@ -870,7 +870,7 @@ class ContributionControllerTest extends TestCase
                 /** @var array $emailContent */
                 $emailContent = Setting::findOrFail('email_content')->value;
 
-                return $mail->getTo() === config('connecting_voices.admin_email')
+                return $mail->getTo() === config('our_covid_voices.admin_email')
                     && $mail->getSubject() === Arr::get($emailContent, 'admin.updated_contribution.subject')
                     && $mail->getBody() === Arr::get($emailContent, 'admin.updated_contribution.body')
                     && $mail->getSubstituter() instanceof UpdatedContributionSubstituter;

@@ -27,7 +27,7 @@ class FileTokenResource extends JsonResource
             'token' => $this->resource->id,
             'download_url' => route('files.download', $fileId) . "?token={$fileTokenId}",
             'expires_at' => $this->resource->created_at->addSeconds(
-                Config::get('connecting_voices.file_tokens.expiry_time')
+                Config::get('our_covid_voices.file_tokens.expiry_time')
             )->toIso8601String(),
         ];
     }

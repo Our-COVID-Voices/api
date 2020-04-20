@@ -28,7 +28,7 @@ class FileToken extends Model
     {
         return Date::now()->greaterThan(
             $this->created_at->addSeconds(
-                Config::get('connecting_voices.file_tokens.expiry_time')
+                Config::get('our_covid_voices.file_tokens.expiry_time')
             )
         );
     }

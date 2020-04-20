@@ -62,7 +62,7 @@ abstract class ApiController extends BaseController
     {
         return (int)$request->input(
             'per_page',
-            Config::get('connecting_voices.pagination.default')
+            Config::get('our_covid_voices.pagination.default')
         );
     }
 }

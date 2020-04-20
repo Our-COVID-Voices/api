@@ -30,8 +30,8 @@ class UpdateEndUserRequest extends FormRequest
             'birth_year' => [
                 'bail',
                 'integer',
-                Rule::min(Date::today()->year - Config::get('connecting_voices.age_requirement.max')),
-                Rule::max(Date::today()->year - Config::get('connecting_voices.age_requirement.min')),
+                Rule::min(Date::today()->year - Config::get('our_covid_voices.age_requirement.max')),
+                Rule::max(Date::today()->year - Config::get('our_covid_voices.age_requirement.min')),
             ],
             'gender' => ['bail', 'string', 'max:255'],
             'ethnicity' => ['bail', 'string', 'max:255'],

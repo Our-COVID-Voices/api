@@ -467,7 +467,7 @@ class EndUserControllerTest extends TestCase
                 /** @var array $emailContent */
                 $emailContent = Setting::findOrFail('email_content')->value;
 
-                return $mail->getTo() === config('connecting_voices.admin_email')
+                return $mail->getTo() === config('our_covid_voices.admin_email')
                     && $mail->getSubject() === Arr::get($emailContent, 'admin.new_end_user.subject')
                     && $mail->getBody() === Arr::get($emailContent, 'admin.new_end_user.body')
                     && $mail->getSubstituter() instanceof NewEndUserSubstituter;
@@ -501,7 +501,7 @@ class EndUserControllerTest extends TestCase
                 'email' => [
                     sprintf(
                         'The account has been withdrawn. Please contact the admin team via %s for more info.',
-                        config('connecting_voices.admin_email')
+                        config('our_covid_voices.admin_email')
                     ),
                 ],
             ],
