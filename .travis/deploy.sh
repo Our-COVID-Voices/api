@@ -21,8 +21,6 @@ esac
 # Declare the configuration variables for the deployment.
 echo "Setting deployment configuration for ${DEPLOYMENT}..."
 export ENV_SECRET_ID=".env.api.${ENVIRONMENT}"
-export PUBLIC_KEY_SECRET_ID="oauth-public.key.${ENVIRONMENT}"
-export PRIVATE_KEY_SECRET_ID="oauth-private.key.${ENVIRONMENT}"
 
 # Build the image.
 ./docker/build.sh

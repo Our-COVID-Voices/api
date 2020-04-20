@@ -4,9 +4,7 @@
 # $TRAVIS_BUILD_DIR = The directory of the project.
 # $TRAVIS_COMMIT = The commit hash of the build.
 # $REPO_URI = The URI of the Docker repo to tag the image with.
-# $ENV_SECRET_ID = The ID of the .env file in AWS Secrets Manager (defaults to ".env").
-# $PUBLIC_KEY_SECRET_ID = The ID of the OAuth public key file in AWS Secrets Manager (default to "oauth-public.key").
-# $PRIVATE_KEY_SECRET_ID = The ID of the OAuth private key file in AWS Secrets Manager (default to "oauth-private.key").
+# $ENV_SECRET_ID = The ID of the .env file in AWS Secrets Manager.
 
 # Bail out on first error.
 set -e
@@ -37,17 +35,6 @@ echo "Downloading .env file..."
 aws secretsmanager get-secret-value \
     --secret-id ${ENV_SECRET_ID} | \
     python -c "import json,sys;obj=json.load(sys.stdin);print obj['SecretString'];" > .env
-
-# Get the OAuth keys.
-echo "Downloading public OAuth key..."
-aws secretsmanager get-secret-value \
-    --secret-id ${PUBLIC_KEY_SECRET_ID} | \
-    python -c "import json,sys;obj=json.load(sys.stdin);print obj['SecretString'];" > storage/oauth-public.key
-
-echo "Downloading private OAuth key..."
-aws secretsmanager get-secret-value \
-    --secret-id ${PRIVATE_KEY_SECRET_ID} | \
-    python -c "import json,sys;obj=json.load(sys.stdin);print obj['SecretString'];" > storage/oauth-private.key
 
 # Build the Docker image with latest code.
 echo "Building Docker images..."
