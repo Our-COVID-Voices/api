@@ -35,8 +35,8 @@ if [[ $# -gt 0  ]]; then
             ;;
 
         cfn|cloudformation )
-            docker-compose run --rm troposphere > aws/${CFN_TEMPLATE}.json
-            cat aws/${CFN_TEMPLATE}.json
+            docker-compose run --rm troposphere > aws/${CFN_TEMPLATE:-cloudformation}.json
+            cat aws/${CFN_TEMPLATE:-cloudformation}.json
             ;;
 
         * ) docker-compose "$@"; ;;
