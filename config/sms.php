@@ -6,6 +6,6 @@ return [
 
     'driver' => env('SMS_DRIVER', 'null'),
 
-    'from' => env('SMS_FROM', 'COVID Voice'),
+    'from' => env('SMS_FROM', 'COVIDVoices'),
 
 ];
