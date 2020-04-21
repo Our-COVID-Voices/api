@@ -85,7 +85,7 @@ And finally create OAuth clients for trusted apps:
 ./develop art passport:client --password
 
 # Authorization grant clients (admin webapp):
-./develop art covid:make:client "Admin" "http://localhost:3000/auth/callback"
+./develop art covid:make:client "Admin" "http://localhost:3000/auth/callback" --first-party
 ```
 
 You should now be able to login to the API, and the admin web app once you've 
