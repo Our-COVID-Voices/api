@@ -25,7 +25,7 @@ return [
         'expiry_time' => 60 * 5,
     ],
 
-    'admin_email' => 'info@nationalvoices.org.uk',
+    'admin_email' => 'info+our-covid-voices@ayup.agency', // TODO: Change this once confirmed by client.
 
     'date_format' => 'd/m/Y',
 
