@@ -58,7 +58,18 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'info@nationalvoices.org.uk'),
+        'address' => env('MAIL_FROM_ADDRESS', 'noreply@mg.ourcovidvoices.co.uk'),
+        'name' => env('MAIL_FROM_NAME', 'National Voices'),
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Global "Reply To" Address
+    |--------------------------------------------------------------------------
+    |
+    */
+    'reply_to' => [
+        'address' => 'info@nationalvoices.org.uk', 
         'name' => env('MAIL_FROM_NAME', 'National Voices'),
     ],
 
